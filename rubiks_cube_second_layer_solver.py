@@ -143,7 +143,7 @@ def orient_top_layer(cube):
             apply_and_print(cube, ["R","U","R'","U'","R'","F","R","F'"])
             print("After turning, the current cube is:\n", cube)
         elif layer_orientations[1] == 2:
-            apply_and_print(cube, ["F","R","U'","R'","U'","F'"])
+            apply_and_print(cube, ["F","R","U","R'","U'","F'"])
             print("After turning, the current cube is:\n", cube)
         else:
             print("Error: Invalid case2neighbor.")
