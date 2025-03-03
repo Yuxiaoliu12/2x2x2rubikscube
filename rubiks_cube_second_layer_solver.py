@@ -179,13 +179,9 @@ def orient_top_layer(cube):
 
 
 def permute_top_layer(cube):
-    # Permute the top layer
-    layer_positions = []
-    for i in range(4):
-        layer_positions.append(cube.positions.index(i))
 
     # Align corner 0
-    correct_corner = layer_positions.index(0)
+    correct_corner = cube.positions[0]
     if correct_corner == 1:
         apply_and_print(cube,["U'"])
     elif correct_corner == 2:
@@ -207,11 +203,11 @@ def permute_top_layer(cube):
         print("The current cube is:", cube)
 
     elif layer_positions == [0,2,1,3]:
-        apply_and_print(cube,["U'","L'", "U", "R'", "D2", "R", "U'", "R'", "D2", "R2","U"])
+        apply_and_print(cube,["U2","R", "U", "R'", "U'", "R'", "F", "R2", "U'", "R'", "U'", "R", "U", "R'", "F'", "U2"])
         print("The current cube is:", cube)
     
     elif layer_positions == [0,2,3,1]:
-        apply_and_print(cube,["U","L'", "U", "R'", "D2", "R", "U'", "R'", "D2", "R2","U'"])
+        apply_and_print(cube,["R", "U", "R'", "U'", "R'", "F", "R2", "U'", "R'", "U'", "R", "U", "R'", "F'", "U"])
         print("The current cube is:", cube)
     
     elif layer_positions == [0,3,1,2]:
@@ -219,6 +215,7 @@ def permute_top_layer(cube):
         print("The current cube is:", cube)
 
     elif layer_positions == [0,3,2,1]:
-        apply_and_print(cube,["U","F", "R", "U'", "R'", "U'", "R", "U", "R'", "F'", "R", "U", "R'", "U'", "R'", "F", "R", "F'","U'"])
+        apply_and_print(cube,["F", "R", "U'", "R'", "U'", "R", "U", "R'", "F'", "R", "U", "R'", "U'", "R'", "F", "R", "F'","U2"])
         print("The current cube is:", cube)
+    
 
